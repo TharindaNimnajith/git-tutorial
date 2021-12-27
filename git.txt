@@ -1,0 +1,212 @@
+which git
+git --version
+
+git config --global user.name "Tharinda Rajapaksha"
+git config --global user.email "tharindarajapakshe@y7mail.com"
+git config --local user.email "tharindarajapakshe@gmail.com"
+git config --global core.editor "notepad.exe"
+                                "vim"
+                                "emacs"
+                                "mate -wl1"
+                                "atom --wait"
+git config --global color.ui true
+                             false
+git config --list
+git config user.name
+git config user.email
+git config core.editor
+git config color.ui
+git config --global alias.ci commit
+git config --global --edit
+
+git
+git help
+git help log
+man git-log
+
+git init
+git remote add origin https://breezy@bitbucket.org/powerstars/first-impressions.git
+git remote add upstream https://bitbucket.org/maintainer/repo
+git pull --all
+git pull origin main
+
+git add .
+git add test
+git add test*
+git add test.txt
+git add -p
+
+git commit -m "bug fix for login function"
+git commit -a
+git commit -all
+git commit -am "commit message"
+git commit --amend
+git commit --amend -m "an updated commit message"
+git commit --amend --no-edit
+
+git stash
+git stash pop
+git stash apply
+git stash list
+git stash save "add style to our site"
+git stash pop stash@{2}
+git stash show
+git stash show -p
+git stash show --patch
+git stash -p
+git stash branch add-stylesheet stash@{1}
+git stash drop stash@{1}
+git stash clear
+git log --oneline --graph stash@{0}
+
+git diff
+git diff --color-words
+git diff HEAD ./path/to/file
+git diff --cached ./path/to/file
+git diff --staged
+git diff --staged ./path/to/file
+git diff 1c16945..9dcff6e --color-words
+git diff 1c16945..HEAD --color-words
+
+git status
+git show c5826daeb6ee3fd89e63ce35fc9f3594fe243605
+
+git tag
+git tag v1.4
+git tag -a v1.4
+git tag -a v1.4 -m "my version 1.4"
+git tag v1.4-lw
+git log --pretty=oneline
+git tag -a v1.2 15027957951b64cf874c3557a0f3547bd83b3ff6
+git tag -a -f v1.4 15027957951b64cf874c3557a0f3547bd83b3ff6
+git push origin v1.4
+git checkout v1.4
+
+git log
+git log --oneline
+git log --stat
+git log -p
+git log <file>
+git log --graph --decorate --oneline
+git log -n 5
+git log --since=2021-12-01
+git log --until=2021-12-01
+git log --until=2021-12-01 -n 5
+git log --author="Tharinda Rajapaksha"
+git log --grep="bug fix"
+git log --since=2019-03-01 --until=2019-03-31 --author="Karen" --grep="refactor"
+
+git blame README.MD
+git blame -L 1,5 README.md
+git blame -e README.md
+git blame -w README.md
+git blame -M README.md
+git blame -C README.md
+
+git clone https://breezy@bitbucket.org/powerstars/first-impressions.git
+git branch future-plans
+git checkout future-plans
+git branch
+git merge future-plans
+git branch -d future-plans
+git fetch
+git fetch && git checkout my-updates
+git push origin my-updates
+git push origin main
+
+git push <remote> <branch>
+git push <remote> --force
+git push <remote> --all
+git push <remote> --tags
+
+git pull <remote>
+git pull --no-commit <remote>
+git pull --rebase <remote>
+git pull --verbose
+
+git remote
+git remote -v
+git remote rm <name>
+git remote rename <old-name> <new-name>
+git remote show upstream
+
+git fetch <remote>
+git fetch <remote> <branch>
+git fetch --dry-run
+
+git branch
+git branch <branch>
+git branch -d <branch>
+git branch -D <branch>
+git branch -m <branch>
+git branch -a
+
+git checkout <new-branch>
+git checkout -b <new-branch>
+git checkout -b <new-branch> <existing-branch>
+
+git fetch --all
+git checkout <remotebranch>
+git checkout -b <remotebranch> origin/<remotebranch>
+git checkout -b <branchname>
+git reset --hard origin/<branchname>
+git merge --abort
+
+git reset
+git reset <file>
+git reset --soft
+git reset --soft 52f823c
+git reset 1a6a403
+git push -f
+git reflog
+git reset --hard
+git reset --hard HEAD@{1}
+git reset --mixed
+git reset HEAD
+git reset HEAD ./path/to/file
+git revert 1f08a70
+
+git rm ./path/to/file
+git rm Documentation/\*.txt
+git rm -f git-*.sh
+git mv 1.txt 2.txt
+git mv 2.txt new/2.txt
+
+git reflog
+git reflog --relative-date
+git reflog show HEAD
+git reflog show --all
+git reflog show branch1
+git reflog main@{0}
+git reflog show main@{0}
+
+git checkout a1e8fb5
+git checkout main
+git checkout -- <file>
+git checkout -- .
+
+git clean
+git clean -i
+git clean -n
+git clean -f
+git clean -dn
+git clean -df
+git clean -xf
+git clean -di
+
+git rebase <base>
+git rebase --interactive <base>
+git rebase --onto main featureA featureB
+git pull --rebase origin main
+git rebase -i origin/main
+git config --global branch.autosetuprebase always
+
+git archive --format=tar HEAD
+git archive --output=./example_repo_archive.tar --format=tar HEAD
+git archive --output=./example_repo_archive.tar.gz --format=tar HEAD ./build
+
+git config --global core.excludesFile ~/.gitignore
+git rm --cached debug.log
+git add -f debug.log
+git commit -m "Force adding debug.log"
+git check-ignore -v debug.log
